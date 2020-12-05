@@ -1,12 +1,18 @@
 #include "Dwarf.h"
 
-//Dwarf::Dwarf
+Dwarf::Dwarf(std::string name, int hp, int armor) : Character(hp, armor, 4) {}  
 
-//Dwarf::getName
+std::string Dwarf::getName()
+{
+    return name;
+}
 
-//Dwarf::getStats
+std::string Dwarf::getStats()
+{
+    return getCharacterStats(*this);
+}
 
-
+/*
     Dwarf(std::string name, int hp, int armor) : Character(hp, armor, 0) {} override 
 
     std::string& getName() override
@@ -18,3 +24,5 @@
     {
         return std::string = "hp is " << hp;
     }
+*/
+
