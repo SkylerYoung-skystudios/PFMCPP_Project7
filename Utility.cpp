@@ -111,5 +111,5 @@ void useAttackItem(Character* character, Item* item)
 
 int random_()
 {
-    return (rand() % 5);
+    return (rand() % 10);
 }
