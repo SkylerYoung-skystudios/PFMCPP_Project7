@@ -108,3 +108,8 @@ void useAttackItem(Character* character, Item* item)
         //dragons don't carry attack items!
     }
 }
+
+int random_()
+{
+    return (rand() % 5);
+}
