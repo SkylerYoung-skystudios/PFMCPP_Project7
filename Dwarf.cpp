@@ -1,28 +1,14 @@
 #include "Dwarf.h"
+#include "Utility.h"
 
-Dwarf::Dwarf(std::string name, int hp, int armor) : Character(hp, armor, 4) {}  
+Dwarf::Dwarf(std::string name_, int hp, int armor) : Character(hp, armor, 4), name(name_) {}  
 
-std::string Dwarf::getName()
+const std::string& Dwarf::getName()
 {
     return name;
 }
 
 std::string Dwarf::getStats()
 {
-    return getCharacterStats(*this);
+    return getCharacterStats(this);
 }
-
-/*
-    Dwarf(std::string name, int hp, int armor) : Character(hp, armor, 0) {} override 
-
-    std::string& getName() override
-    {
-        return name;
-    }
-
-    std::string getStats() override
-    {
-        return std::string = "hp is " << hp;
-    }
-*/
-

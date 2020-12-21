@@ -1,12 +1,11 @@
 #pragma once
-
 #include "Character.h"
 
 struct Dragon : public Character
 {
-    Dragon(std::string name, int hp, int armor) : Character(hp, armor, 0) {}
+    Dragon(std::string name_, int hp, int armor);
 
-    std::string& getName() override;
+    const std::string& getName() override;
     std::string getStats() override;
 
     void attack(Character& other) override;
