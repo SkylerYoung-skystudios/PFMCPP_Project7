@@ -32,6 +32,7 @@ std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
     return items;
 }
 
+
 std::string getCharacterStats(Character* ch)
 {
     std::string str;
@@ -40,7 +41,7 @@ std::string getCharacterStats(Character* ch)
     str += "    armor: " + std::to_string(ch->getArmorLevel()) + "\n";
     str += "    attack damage: " + std::to_string(ch->getAttackDamage()) + "\n";
     str += "    is defending: " + std::string((ch->getIsDefending() ? "true" : "false" )) + "\n";
-    str += "    " + std::to_string(ch->getHelpfulItems().size()) + " helpful items,  " + std::to_string(ch->getDefensiveItems().size()) + " defensive items";
+    str += "    " + std::to_string(ch->getHelpfulItems().size()) + " helpful items,  " + std::to_string(ch->getDefensiveItems().size()) + " defensive items ";
     return str;
 }
 

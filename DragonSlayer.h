@@ -1,7 +1,8 @@
 #pragma once
 #include "Character.h"
+#include "AttackItem.h"
 
-struct DragonSlayer : public Character
+struct DragonSlayer : Character
 {
     DragonSlayer(std::string name_, int hp, int armor);
 
@@ -10,7 +11,7 @@ struct DragonSlayer : public Character
 
     void attack(Character& other) override;
 
-    std::unique_ptr<Item> attackItem;
 private:
     const std::string name;
+    std::unique_ptr<Item> attackItem { new AttackItem() };;
 };
